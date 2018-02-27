@@ -5,6 +5,11 @@
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    <title>Loan Calculator</title>
+   <style>
+      #loading, #results {
+         display: none;
+      }
+   </style>
 </head>
 <body class="bg-dark">
    <div class="container">
@@ -37,17 +42,16 @@
                      <input type="submit" value="Calculate" class="btn btn-dark btn-block">
                   </div> <!-- end form-group -->
                </form>
-               <!-- LOADER HERE 
-               <div class="loading">
-                  <img src="img/loading.gif" alt="">
+               <!-- LOADER HERE -->
+               <div id="loading">
+                  <img src="img/loading.gif">
                </div>
-               -->
-               <!-- RESULTS -->
+            <!-- RESULTS -->
                <div id="results" class="pt-4">
                   <h5>Results</h5>
                   <div class="form-group">
                      <div class="input-group mb-3">
-                        <div class="input-group-prepend">
+                        <div class="input-group-prepend">  
                            <span class="input-group-text">Monthly Payment</span>
                         </div> <!-- end input group prepend -->    
                            <input type="number" class="form-control" id="monthly-payment" disabled>
